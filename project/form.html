@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<form name="form" onsubmit = "return validate()" action="insert1.php" method="POST" >
+<div class="wrapper">
+      <div class="title">
+        Registration Form
+      </div>
+      <div class="form">
+        <div class="inputfield">
+            <label>Name :</label>
+            <input type="text" class="input" name="name" pattern="[a-zA-Z ]+" oninvalid="setCustomValidity('Please enter alphabets only. ')" required>
+        </div>  
+          <div class="inputfield">
+            <label>Last Name</label>
+            <input type="text" class="input" name="lname" pattern="[a-zA-Z ]+" oninvalid="setCustomValidity('Please enter alphabets only. ')" required>
+        </div>  
+          <div class="inputfield">
+            <label>Events</label>
+            <div class="custom_select">
+              <select name="events" required>
+                <option value="" >Select</option>
+                <option value="IOT" >IOT</option>
+                <option value="Machine Learning" >Machine Learning</option>
+                <option value="App Development" >App Development</option>
+                <option value="Pro Shows" >Pro shows</option>
+                <option value="Dance Workshop" >Dance Workshop</option>
+                <option value="Block Chain" >Block Chain</option>
+                <option value="Robotics" >Robotics</option>
+
+
+              </select>
+            </div>
+        </div> 
+          <div class="inputfield">
+            <label>Email Address</label>
+            <input type="email" class="input" name="email" required>
+        </div> 
+          <div class="inputfield">
+            <label>Institute</label>
+            <input type="text" class="input" name="institute" required>
+        </div>
+          <div class="inputfield">
+            <label>Phone no:</label>
+            <input id="number" type="text" class="input" name="number" pattern="[1-9]{1}[0-9]{9}" oninvalid="setCustomValidity('Please enter a valid number starts without 0')" required>
+        </div> 
+          <div class="inputfield">
+            <label>Address</label>
+            <textarea rows="4" cols="20" name="address" class="textarea" required></textarea>
+        </div> 
+          <div class="inputfield terms">
+            <label class="check">
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+            </label>
+            <p>Agreed to terms and conditions</p>
+        </div> 
+          <div class="inputfield">
+          <input type="submit" value="Register" class="btn" >
+        </div>
+        
+      </div>
+</div>	
+</form>
+</body>
+</html>
